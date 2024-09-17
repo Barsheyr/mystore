@@ -1,7 +1,10 @@
-import React from "react";
+import Hero from "@/components/home/Hero";
 
-const page = () => {
-  return <div>page</div>;
-};
-
-export default page;
+function HomePage() {
+  return (
+    <div>
+      <Hero />
+    </div>
+  );
+}
+export default HomePage;
