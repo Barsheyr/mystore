@@ -4,7 +4,6 @@ import HeroImg from "@/assests/heroImg.jpg";
 import { Button } from "@/components/ui/button";
 import { ArrowTopRightIcon } from "@radix-ui/react-icons";
 import Badge from "@/components/global/Badge";
-import { RiBriefcase4Fill, RiTeamFill, RiTodoFill } from "react-icons/ri";
 
 const Hero = () => {
   return (
@@ -20,43 +19,45 @@ const Hero = () => {
       </Button>
 
       <div
-        className="grid lg:grid-cols-2 outline-dashed
-       outline-2 outline-offset-2 outline-[#C777D4] p-10"
+        className="grid lg:grid-cols-2 border-dashed
+       border-2 border-slate-800"
       >
-        <div>
+        <div className="p-10 space-y-10">
           <h1 className="lg:text-4xl"> ELEVATE YOUR STYLE WITH STYLELOOM </h1>
-          <p>
+          <p className="">
             Explore a world of fashion at StyleLoom, where trends meet
             affordability. Immerse yourself in the latest styles and seize
             exclusive promotions.
           </p>
         </div>
-        <div>
-          <div className="">
-            {/* badge 1*/}
-            <Badge
-              containerStyles=""
-              icon={<RiBriefcase4Fill />}
-              endCountNum={3}
-              badgeText="Years Of Experience"
-            />
-            {/* badge 2 */}
-            <Badge
-              containerStyles=""
-              icon={<RiTodoFill />}
-              endCountNum={6}
-              endCountText="k"
-              badgeText="Finished Projects"
-            />
-            {/* badge 3 */}
-            <Badge
-              containerStyles=""
-              icon={<RiTeamFill />}
-              endCountNum={2}
-              endCountText="k"
-              badgeText="Happy Clients"
-            />
-          </div>
+        <div className="grid grid-cols-2">
+          {/* badge 1*/}
+          <Badge
+            containerStyles="border-dashed border-l-2 border-b-2 border-slate-800"
+            endCountNum={1500}
+            badgeText="Fashion Products"
+          />
+          {/* badge 2 */}
+          <Badge
+            containerStyles="border-dashed border-l-2 border-b-2 border-slate-800"
+            endCountNum={50}
+            endCountText="+"
+            badgeText="New arrivals every month"
+          />
+          {/* badge 3 */}
+          <Badge
+            containerStyles="border-dashed border-l-2 border-slate-800"
+            endCountNum={30}
+            endCountText="%"
+            badgeText="OFF on select items"
+          />
+          {/* badge 4 */}
+          <Badge
+            containerStyles="border-dashed border-l-2 border-slate-800"
+            endCountNum={95}
+            endCountText="%"
+            badgeText="Customer Satisfaction Rate"
+          />
         </div>
       </div>
     </div>
