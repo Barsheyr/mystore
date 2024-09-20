@@ -24,7 +24,7 @@ const Badge: React.FC<BadgeProps> = ({
           <CountUp end={endCountNum} delay={1} duration={4} />
           {endCountText}
         </div>
-        <div className="leading-none text-sm font-medium text-slate-400">
+        <div className="leading-none text-sm font-medium text-[#C4A484]">
           {badgeText}
         </div>
       </div>

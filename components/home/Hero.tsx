@@ -20,11 +20,11 @@ const Hero = () => {
 
       <div
         className="grid lg:grid-cols-2 border-dashed
-       border-2 border-slate-800"
+       border-2"
       >
         <div className="p-10 space-y-10">
           <h1 className="lg:text-4xl"> ELEVATE YOUR STYLE WITH STYLELOOM </h1>
-          <p className="">
+          <p className="text-[#C4A484]">
             Explore a world of fashion at StyleLoom, where trends meet
             affordability. Immerse yourself in the latest styles and seize
             exclusive promotions.
@@ -33,27 +33,28 @@ const Hero = () => {
         <div className="grid grid-cols-2">
           {/* badge 1*/}
           <Badge
-            containerStyles="border-dashed border-l-2 border-b-2 border-slate-800"
+            containerStyles="border-dashed border-l-2 border-b-2"
             endCountNum={1500}
+            endCountText="+"
             badgeText="Fashion Products"
           />
           {/* badge 2 */}
           <Badge
-            containerStyles="border-dashed border-l-2 border-b-2 border-slate-800"
+            containerStyles="border-dashed border-l-2 border-b-2"
             endCountNum={50}
             endCountText="+"
             badgeText="New arrivals every month"
           />
           {/* badge 3 */}
           <Badge
-            containerStyles="border-dashed border-l-2 border-slate-800"
+            containerStyles="border-dashed border-l-2"
             endCountNum={30}
             endCountText="%"
             badgeText="OFF on select items"
           />
           {/* badge 4 */}
           <Badge
-            containerStyles="border-dashed border-l-2 border-slate-800"
+            containerStyles="border-dashed border-l-2"
             endCountNum={95}
             endCountText="%"
             badgeText="Customer Satisfaction Rate"
