@@ -1,0 +1,52 @@
+[
+  {
+    "name": "Classic Leather Jacket",
+    "company": "UrbanWear",
+    "description": "Crafted from genuine leather, this classic jacket is the perfect mix of rugged and refined. Pair it with jeans or chinos for a sharp look. Durable, versatile, and never goes out of style.",
+    "featured": true,
+    "image": "https://images.pexels.com/photos/631165/pexels-photo-631165.jpeg?auto=compress&cs=tinysrgb&w=1600",
+    "price": 150,
+    "clerkId": "clerkId",
+    "category": "Men"
+  },
+  {
+    "name": "Denim Jeans",
+    "company": "BlueStone",
+    "description": "High-quality denim jeans designed for both comfort and durability. Perfect for casual wear, these jeans offer a classic fit that suits a wide range of styles. Available in various shades.",
+    "featured": true,
+    "image": "https://images.pexels.com/photos/991509/pexels-photo-991509.jpeg?auto=compress&cs=tinysrgb&w=1600",
+    "price": 60,
+    "clerkId": "clerkId",
+    "category": "Women"
+  },
+  {
+    "name": "Women's Summer Dress",
+    "company": "FemmeChic",
+    "description": "Lightweight and breezy, this summer dress is perfect for warm days. Featuring a floral pattern and soft fabric, it provides comfort while keeping you stylish. A must-have for every woman’s wardrobe.",
+    "featured": true,
+    "image": "https://images.pexels.com/photos/2983464/pexels-photo-2983464.jpeg?auto=compress&cs=tinysrgb&w=1600",
+    "price": 45,
+    "clerkId": "clerkId",
+    "category": "Kids"
+  },
+  {
+    "name": "Men's Polo Shirt",
+    "company": "ModernMan",
+    "description": "A versatile polo shirt that's ideal for both casual and semi-formal occasions. Made from breathable cotton, this shirt offers maximum comfort without sacrificing style.",
+    "featured": false,
+    "image": "https://images.pexels.com/photos/2983464/pexels-photo-2983464.jpeg?auto=compress&cs=tinysrgb&w=1600",
+    "price": 35,
+    "clerkId": "clerkId",
+    "category": "Men"
+  },
+  {
+    "name": "Women's Blazer",
+    "company": "Elegance",
+    "description": "This tailored blazer elevates any outfit, whether you're dressing up for work or a night out. Made from high-quality materials, it offers a sleek, professional appearance with a modern touch.",
+    "featured": false,
+    "image": "https://images.pexels.com/photos/789812/pexels-photo-789812.jpeg?auto=compress&cs=tinysrgb&w=1600",
+    "price": 85,
+    "clerkId": "clerkId",
+    "category": "Women"
+  }
+]
