@@ -20,7 +20,7 @@ function ProductsGrid({ products }: { products: Product[] }) {
               <Link href={`/products/${productId}`}>
                 <Card className="transform group-hover:shadow-xl transition-shadow duration-500">
                   <CardContent className="p-4">
-                    <div className="relative h-64 md:h-48 rounded overflow-hidden ">
+                    <div className="relative h-64 md:h-[100vh] rounded overflow-hidden ">
                       <Image
                         src={image}
                         alt={name}
