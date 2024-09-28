@@ -27,7 +27,7 @@
     "image": "https://images.pexels.com/photos/2983464/pexels-photo-2983464.jpeg?auto=compress&cs=tinysrgb&w=1600",
     "price": 45,
     "clerkId": "clerkId",
-    "category": "Kids"
+    "category": "Women"
   },
   {
     "name": "Men's Polo Shirt",
@@ -48,5 +48,55 @@
     "price": 85,
     "clerkId": "clerkId",
     "category": "Women"
+  },
+  {
+    "name": "Kids' Graphic T-Shirt",
+    "company": "TinyTrends",
+    "description": "This fun and playful graphic t-shirt is perfect for kids who love to show their personality. Made from 100% cotton, it ensures comfort all day long.",
+    "featured": true,
+    "image": "https://images.pexels.com/photos/2346569/pexels-photo-2346569.jpeg?auto=compress&cs=tinysrgb&w=1600",
+    "price": 20,
+    "clerkId": "clerkId",
+    "category": "Kids"
+  },
+  {
+    "name": "Men's Casual Sneakers",
+    "company": "StreetStep",
+    "description": "Stylish and comfortable sneakers that are perfect for everyday wear. These shoes are designed with durability in mind, ensuring that they last.",
+    "featured": false,
+    "image": "https://images.pexels.com/photos/2529148/pexels-photo-2529148.jpeg?auto=compress&cs=tinysrgb&w=1600",
+    "price": 75,
+    "clerkId": "clerkId",
+    "category": "Men"
+  },
+  {
+    "name": "Women's High Heels",
+    "company": "Eleganza",
+    "description": "Elegant high heels that add a touch of class to any outfit. Perfect for formal occasions, these shoes combine style with comfort.",
+    "featured": true,
+    "image": "https://images.pexels.com/photos/604633/pexels-photo-604633.jpeg?auto=compress&cs=tinysrgb&w=1600",
+    "price": 95,
+    "clerkId": "clerkId",
+    "category": "Women"
+  },
+  {
+    "name": "Kids' Winter Jacket",
+    "company": "LittleExplorer",
+    "description": "Keep your little ones warm and cozy with this high-quality winter jacket. Designed to withstand cold weather, it’s perfect for outdoor adventures.",
+    "featured": true,
+    "image": "https://images.pexels.com/photos/2382603/pexels-photo-2382603.jpeg?auto=compress&cs=tinysrgb&w=1600",
+    "price": 55,
+    "clerkId": "clerkId",
+    "category": "Kids"
+  },
+  {
+    "name": "Men's Wool Overcoat",
+    "company": "Gentleman's Choice",
+    "description": "This luxurious wool overcoat is a must-have for men who want to stay warm while looking sharp. Ideal for formal and casual events alike.",
+    "featured": true,
+    "image": "https://images.pexels.com/photos/1334605/pexels-photo-1334605.jpeg?auto=compress&cs=tinysrgb&w=1600",
+    "price": 180,
+    "clerkId": "clerkId",
+    "category": "Men"
   }
 ]
