@@ -98,5 +98,35 @@
     "price": 180,
     "clerkId": "clerkId",
     "category": "Men"
+  },
+  {
+    "name": "Men's Wool Overcoat",
+    "company": "Gentleman's Choice",
+    "description": "This luxurious wool overcoat is a must-have for men who want to stay warm while looking sharp. Ideal for formal and casual events alike.",
+    "featured": true,
+    "image": "https://images.pexels.com/photos/1334605/pexels-photo-1334605.jpeg?auto=compress&cs=tinysrgb&w=1600",
+    "price": 180,
+    "clerkId": "clerkId",
+    "category": "Men"
+  },
+  {
+    "name": "Men's Wool Overcoat",
+    "company": "Gentleman's Choice",
+    "description": "This luxurious wool overcoat is a must-have for men who want to stay warm while looking sharp. Ideal for formal and casual events alike.",
+    "featured": true,
+    "image": "https://images.pexels.com/photos/1334605/pexels-photo-1334605.jpeg?auto=compress&cs=tinysrgb&w=1600",
+    "price": 180,
+    "clerkId": "clerkId",
+    "category": "Men"
+  },
+  {
+    "name": "Men's Wool Overcoat",
+    "company": "Gentleman's Choice",
+    "description": "This luxurious wool overcoat is a must-have for men who want to stay warm while looking sharp. Ideal for formal and casual events alike.",
+    "featured": true,
+    "image": "https://images.pexels.com/photos/1334605/pexels-photo-1334605.jpeg?auto=compress&cs=tinysrgb&w=1600",
+    "price": 180,
+    "clerkId": "clerkId",
+    "category": "Men"
   }
 ]

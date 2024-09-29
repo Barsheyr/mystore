@@ -1,7 +1,32 @@
-import React from "react";
+import ProductsContainer from "@/components/products/ProductsContainer";
+import Filter from "@/components/products/Filter";
 
-const page = () => {
-  return <div>page</div>;
-};
+async function ProductsPage({
+  searchParams,
+}: {
+  searchParams: {
+    layout?: string;
+    search?: string;
+    category?: string;
+    page?: string;
+  };
+}) {
+  const layout = searchParams.layout || "grid";
+  const search = searchParams.search || "";
+  const category = searchParams.category || "";
+  const page = parseInt(searchParams.page || "1");
 
-export default page;
+  return (
+    <>
+      <Filter />
+      <ProductsContainer
+        layout={layout}
+        search={search}
+        category={category}
+        page={page}
+      />
+    </>
+  );
+}
+
+export default ProductsPage;
