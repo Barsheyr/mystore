@@ -1,28 +1,32 @@
 import ProductsGrid from "./ProductsGrid";
 import ProductsList from "./ProductsList";
-import Pagination from "./Pagination";
 import { LuLayoutGrid, LuList } from "react-icons/lu";
 import { Button } from "@/components/ui/button";
 import { Separator } from "@/components/ui/separator";
 import { fetchAllProducts } from "@/utils/actions";
 import Link from "next/link";
+import Pagination from "./Pagination";
+import Filter from "./Filter";
 
 async function ProductsContainer({
   layout,
   search,
   category,
-  page,
+  page = 1,
 }: {
   layout: string;
   search: string;
   category: string;
   page: number;
 }) {
-  const products = await fetchAllProducts({ search, category, page });
+  const productsPerPage = 10; // Set limit of products per page
+  const skip = (page - 1) * productsPerPage;
+
+  const products = await fetchAllProducts({ search, category });
   const totalProducts = products.length;
+  const displayedProducts = products.slice(skip, skip + productsPerPage);
   const searchTerm = search ? `&search=${search}` : "";
   const categoryParam = category ? `&category=${category}` : "";
-  const pageParam = `&page=${page}`;
 
   return (
     <>
@@ -38,9 +42,7 @@ async function ProductsContainer({
               size="icon"
               asChild
             >
-              <Link
-                href={`/products?layout=grid${searchTerm}${categoryParam}${pageParam}`}
-              >
+              <Link href={`/products?layout=grid${searchTerm}${categoryParam}`}>
                 <LuLayoutGrid />
               </Link>
             </Button>
@@ -49,9 +51,7 @@ async function ProductsContainer({
               size="icon"
               asChild
             >
-              <Link
-                href={`/products?layout=list${searchTerm}${categoryParam}${pageParam}`}
-              >
+              <Link href={`/products?layout=list${searchTerm}${categoryParam}`}>
                 <LuList />
               </Link>
             </Button>
@@ -59,6 +59,10 @@ async function ProductsContainer({
         </div>
         <Separator className="mt-4" />
       </section>
+
+      {/* FILTER */}
+      <Filter />
+
       {/* PRODUCTS */}
       <div>
         {totalProducts === 0 ? (
@@ -66,12 +70,17 @@ async function ProductsContainer({
             Sorry, no products matched your search...
           </h5>
         ) : layout === "grid" ? (
-          <ProductsGrid products={products} />
+          <ProductsGrid products={displayedProducts} />
         ) : (
-          <ProductsGrid products={products} />
+          <ProductsList products={displayedProducts} />
         )}
       </div>
-      <Pagination totalProducts={totalProducts} />
+
+      {/* PAGINATION */}
+      <Pagination
+        totalProducts={totalProducts}
+        productsPerPage={productsPerPage}
+      />
     </>
   );
 }

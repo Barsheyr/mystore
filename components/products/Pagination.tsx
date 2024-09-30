@@ -1,48 +1,55 @@
-"use client"; // Mark this as a client-side component
+"use client"; // Mark this component as a Client Component
 
 import { useRouter } from "next/navigation";
+import { useEffect, useState } from "react";
 
-function Pagination({ totalProducts }: { totalProducts: number }) {
+const Pagination = ({
+  totalProducts,
+  productsPerPage,
+}: {
+  totalProducts: number;
+  productsPerPage: number;
+}) => {
   const router = useRouter();
-  const searchParams = new URLSearchParams(window.location.search);
-  const currentPage = parseInt(searchParams.get("page") || "1");
-  const totalPages = Math.ceil(totalProducts / 10);
+  const totalPages = Math.ceil(totalProducts / productsPerPage);
+
+  const [currentPage, setCurrentPage] = useState(1);
+
+  // Synchronize the current page with the URL parameter
+  useEffect(() => {
+    const searchParams = new URLSearchParams(window.location.search);
+    const pageParam = searchParams.get("page");
+    setCurrentPage(pageParam ? parseInt(pageParam) : 1);
+  }, []);
 
   const handlePageChange = (newPage: number) => {
-    searchParams.set("page", newPage.toString());
-    const newUrl = `/products?${searchParams.toString()}`;
-    router.push(newUrl);
+    const params = new URLSearchParams(window.location.search);
+    params.set("page", newPage.toString());
+
+    router.push(`/products?${params.toString()}`);
   };
 
   return (
-    <div className="flex justify-center mt-8 space-x-4">
+    <div className="flex justify-center items-center my-8 gap-4">
       <button
+        className="px-4 py-2 bg-yellow-200 rounded-md"
         disabled={currentPage === 1}
         onClick={() => handlePageChange(currentPage - 1)}
-        className="px-4 py-2 text-white bg-gray-500 rounded disabled:bg-gray-300"
       >
         Previous
       </button>
-      {Array.from({ length: totalPages }, (_, i) => (
-        <button
-          key={i + 1}
-          onClick={() => handlePageChange(i + 1)}
-          className={`px-4 py-2 ${
-            currentPage === i + 1 ? "bg-blue-500 text-white" : "bg-gray-200"
-          } rounded`}
-        >
-          {i + 1}
-        </button>
-      ))}
+      <span>
+        Page {currentPage} of {totalPages}
+      </span>
       <button
+        className="px-4 py-2 bg-yellow-200 rounded-md"
         disabled={currentPage === totalPages}
         onClick={() => handlePageChange(currentPage + 1)}
-        className="px-4 py-2 text-white bg-gray-500 rounded disabled:bg-gray-300"
       >
         Next
       </button>
     </div>
   );
-}
+};
 
 export default Pagination;

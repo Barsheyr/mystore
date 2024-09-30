@@ -12,15 +12,14 @@ export const fetchFeaturedProducts = async () => {
 export const fetchAllProducts = ({
   search = "",
   category = "",
-  page = 1,
+  skip = 0,
+  take = 10, // Fetch 10 products per page by default
 }: {
   search: string;
   category?: string;
-  page?: number; // New page parameter
+  skip?: number;
+  take?: number;
 }) => {
-  const skip = (page - 1) * 10;
-  const take = 10;
-
   return db.product.findMany({
     where: {
       AND: [
@@ -38,7 +37,7 @@ export const fetchAllProducts = ({
     orderBy: {
       createdAt: "desc",
     },
-    skip, // Skipping records based on the page number
-    take, // Taking only 10 records
+    skip,
+    take,
   });
 };
