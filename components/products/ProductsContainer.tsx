@@ -4,6 +4,8 @@ import { LuLayoutGrid, LuList } from "react-icons/lu";
 import { Button } from "@/components/ui/button";
 import { Separator } from "@/components/ui/separator";
 import { fetchAllProducts } from "@/utils/actions";
+import SectionThree3 from "@/assests/SectionThree.svg";
+import Image from "next/image";
 import Link from "next/link";
 import Pagination from "./Pagination";
 import Filter from "./Filter";
@@ -61,10 +63,26 @@ async function ProductsContainer({
       </section>
 
       {/* FILTER */}
-      <Filter />
+      <div className="mt-10">
+        <Filter />
+      </div>
 
       {/* PRODUCTS */}
-      <div>
+      <section className="mt-24 border-dashed border-2 relative">
+        <div className="space-y-10 lg:p-24 p-10">
+          <h1 className="lg:text-3xl text-xl uppercase">
+            Explore the Latest Trends and Timeless Classics
+          </h1>
+          <p className="text-sm text-[#C4A484]">
+            Each piece crafted to enhance your fashion statement
+          </p>
+
+          <Image
+            src={SectionThree3}
+            alt="image"
+            className="absolute top-0 right-0 lg:block hidden"
+          />
+        </div>
         {totalProducts === 0 ? (
           <h5 className="text-2xl mt-16">
             Sorry, no products matched your search...
@@ -74,7 +92,7 @@ async function ProductsContainer({
         ) : (
           <ProductsList products={displayedProducts} />
         )}
-      </div>
+      </section>
 
       {/* PAGINATION */}
       <Pagination

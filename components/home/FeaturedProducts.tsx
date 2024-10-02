@@ -1,7 +1,7 @@
 import { fetchFeaturedProducts } from "@/utils/actions";
 import EmptyList from "../global/EmptyList";
 import Image from "next/image";
-import SectionTitle from "../global/SectionTitle";
+// import SectionTitle from "../global/SectionTitle";
 import ProductsGrid from "../products/ProductsGrid";
 import SectionThree3 from "@/assests/SectionThree.svg";
 

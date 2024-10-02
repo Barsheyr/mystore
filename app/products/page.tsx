@@ -18,7 +18,6 @@ async function ProductsPage({
 
   return (
     <>
-      <Filter />
       <ProductsContainer
         layout={layout}
         search={search}
