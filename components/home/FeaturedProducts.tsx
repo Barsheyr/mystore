@@ -4,6 +4,7 @@ import Image from "next/image";
 // import SectionTitle from "../global/SectionTitle";
 import ProductsGrid from "../products/ProductsGrid";
 import SectionThree3 from "@/assests/SectionThree.svg";
+import Filter from "../products/Filter";
 
 async function FeaturedProducts() {
   const products = await fetchFeaturedProducts();
@@ -18,6 +19,8 @@ async function FeaturedProducts() {
         <p className="text-sm text-[#C4A484]">
           Each piece crafted to enhance your fashion statement
         </p>
+
+        <Filter />
       </div>
       <Image
         src={SectionThree3}
