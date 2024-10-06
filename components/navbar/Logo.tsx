@@ -1,9 +1,12 @@
 import React from "react";
+import Link from "next/link";
 
 const Logo = () => {
   return (
     <div>
-      <h1 className="text-3xl">Style.Loom</h1>
+      <Link href="/">
+        <h1 className="text-3xl cursor-pointer">Style.Loom</h1>
+      </Link>
     </div>
   );
 };

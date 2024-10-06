@@ -4,6 +4,7 @@ import SectionThree from "@/components/home/SectionThree";
 import SectionFour from "@/components/home/SectionFour";
 import FeaturedProducts from "@/components/home/FeaturedProducts";
 import FAQ from "@/components/home/FAQ";
+import CTO from "@/components/global/CTO";
 
 function HomePage() {
   return (
@@ -14,6 +15,7 @@ function HomePage() {
       <SectionFour />
       <FeaturedProducts />
       <FAQ />
+      <CTO />
     </div>
   );
 }
