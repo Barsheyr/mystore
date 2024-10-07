@@ -40,15 +40,15 @@ const Footer = () => {
                 <h1> Why US </h1>
                 <h1> About US </h1>
                 <h1> Testimonials </h1>
-                <h1> FAQ's </h1>
+                <h1> FAQs </h1>
               </div>
             </div>
             <div className="flex flex-col space-y-5 lg:mt-0 mt-10">
               <h1 className="text-2xl"> Products </h1>
               <div className="flex flex-row items-center justify-between gap-5 text-[#C4A484]">
-                <h1> Men's Wear </h1>
-                <h1> Women's Wear </h1>
-                <h1> Kid's Wear </h1>
+                <h1>Men&apos;s Wear</h1>
+                <h1>Women&apos;s Wear</h1>
+                <h1>Kids&apos; Wear</h1>
               </div>
             </div>
 
