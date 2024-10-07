@@ -1,5 +1,4 @@
 import ProductsContainer from "@/components/products/ProductsContainer";
-import Filter from "@/components/products/Filter";
 
 async function ProductsPage({
   searchParams,
