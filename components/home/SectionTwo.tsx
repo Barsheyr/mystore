@@ -1,17 +1,17 @@
 import React from "react";
 import Image from "next/image";
-import wrong from "@/assests/Vector.svg";
-import SectionTO from "@/assests/SectionTO.svg";
-import SectionThree from "@/assests/Section3.svg";
-import SectionFour from "@/assests/Section4.svg";
-import SectionFive from "@/assests/Section5.svg";
-import SectionSix from "@/assests/Section6.svg";
-import SectionSeven from "@/assests/Section7.svg";
-import SectionEight from "@/assests/Section8.svg";
-import SectionNine from "@/assests/Section9.svg";
-import SectionTen from "@/assests/Section10.svg";
-import SectionEleven from "@/assests/Section11.svg";
-import SectionTwelve from "@/assests/Section12.svg";
+import wrong from "@/assets/Vector.svg";
+import SectionTO from "@/assets/SectionTO.svg";
+import SectionThree from "@/assets/Section3.svg";
+import SectionFour from "@/assets/Section4.svg";
+import SectionFive from "@/assets/Section5.svg";
+import SectionSix from "@/assets/Section6.svg";
+import SectionSeven from "@/assets/Section7.svg";
+import SectionEight from "@/assets/Section8.svg";
+import SectionNine from "@/assets/Section9.svg";
+import SectionTen from "@/assets/Section10.svg";
+import SectionEleven from "@/assets/Section11.svg";
+import SectionTwelve from "@/assets/Section12.svg";
 
 const SectionTwo = () => {
   return (

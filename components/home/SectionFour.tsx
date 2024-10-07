@@ -1,6 +1,6 @@
 import React from "react";
 import Image from "next/image";
-import SectionFour1 from "@/assests/Testimonial.svg";
+import SectionFour1 from "@/assets/Testimonial.svg";
 
 const SectionFour = () => {
   return (

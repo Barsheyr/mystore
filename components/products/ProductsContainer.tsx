@@ -4,7 +4,7 @@ import { LuLayoutGrid, LuList } from "react-icons/lu";
 import { Button } from "@/components/ui/button";
 import { Separator } from "@/components/ui/separator";
 import { fetchAllProducts } from "@/utils/actions";
-import SectionThree3 from "@/assests/SectionThree.svg";
+import SectionThree3 from "@/assets/SectionThree.svg";
 import Image from "next/image";
 import Link from "next/link";
 import Pagination from "./Pagination";

@@ -1,6 +1,6 @@
 import React from "react";
 import Image from "next/image";
-import SectionThree3 from "@/assests/SectionThree.svg";
+import SectionThree3 from "@/assets/SectionThree.svg";
 import Tabs from "./Tabs";
 
 const FAQ = () => {

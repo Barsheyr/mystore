@@ -3,7 +3,7 @@ import EmptyList from "../global/EmptyList";
 import Image from "next/image";
 // import SectionTitle from "../global/SectionTitle";
 import ProductsGrid from "../products/ProductsGrid";
-import SectionThree3 from "@/assests/SectionThree.svg";
+import SectionThree3 from "@/assets/SectionThree.svg";
 import Filter from "../products/Filter";
 
 async function FeaturedProducts() {

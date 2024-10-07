@@ -1,6 +1,6 @@
 import React from "react";
 import Image from "next/image";
-import HeroImg from "@/assests/heroImg.jpg";
+import HeroImg from "@/assets/HeroImg.jpg";
 import { Button } from "@/components/ui/button";
 import { ArrowTopRightIcon } from "@radix-ui/react-icons";
 import Badge from "@/components/global/Badge";

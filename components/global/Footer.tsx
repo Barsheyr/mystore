@@ -1,11 +1,10 @@
 import React from "react";
-import Dot from "@/assests/dot.svg";
+import Dot from "@/assets/dot.svg";
 import Image from "next/image";
-import { TwitterLogoIcon, InstagramLogoIcon } from "@radix-ui/react-icons";
-import Basketball from "@/assests/Basketball.svg";
-import BE from "@/assests/BE.svg";
-import Twitter from "@/assests/Twitter.svg";
-import Instagram from "@/assests/Instagram.svg";
+import Basketball from "@/assets/Basketball.svg";
+import BE from "@/assets/BE.svg";
+import Twitter from "@/assets/Twitter.svg";
+import Instagram from "@/assets/Instagram.svg";
 
 const Footer = () => {
   return (
@@ -44,7 +43,7 @@ const Footer = () => {
                 <h1> FAQ's </h1>
               </div>
             </div>
-            <div className="flex flex-col space-y-5 mt-10">
+            <div className="flex flex-col space-y-5 lg:mt-0 mt-10">
               <h1 className="text-2xl"> Products </h1>
               <div className="flex flex-row items-center justify-between gap-5 text-[#C4A484]">
                 <h1> Men's Wear </h1>
