@@ -1,7 +1,8 @@
-import React from "react";
+"use client";
 
-const loading = () => {
-  return <div>loading</div>;
-};
+import LoadingTable from "@/components/global/LoadingTable";
 
+function loading() {
+  return <LoadingTable />;
+}
 export default loading;
