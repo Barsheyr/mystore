@@ -603,6 +603,7 @@ export const createOrderAction = async (prevState: any, formData: FormData) => {
   }
   redirect("/orders");
 };
+
 export const fetchUserOrders = async () => {
   const user = await getAuthUser();
   const orders = await db.order.findMany({
