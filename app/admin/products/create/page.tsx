@@ -40,6 +40,24 @@ function CreateProduct() {
             labelText="product description"
             defaultValue={description}
           />
+
+          {/* New category select dropdown */}
+          <div className="mt-4">
+            <label htmlFor="category" className="block font-semibold mb-2">
+              Category
+            </label>
+            <select
+              name="category"
+              id="category"
+              className="w-full p-2 border rounded-md"
+              required
+            >
+              <option value="Men">Men</option>
+              <option value="Women">Women</option>
+              <option value="Kids">Kids</option>
+            </select>
+          </div>
+
           <div className="mt-6">
             <CheckboxInput name="featured" label="featured" />
           </div>
