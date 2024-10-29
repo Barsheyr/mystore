@@ -23,7 +23,9 @@ const Hero = () => {
        border-2"
       >
         <div className="p-10 space-y-10">
-          <h1 className="lg:text-4xl"> ELEVATE YOUR STYLE WITH STYLELOOM </h1>
+          <h1 className="text-3xl lg:text-4xl font-bold">
+            ELEVATE YOUR STYLE WITH STYLELOOM
+          </h1>
           <p className="text-[#C4A484]">
             Explore a world of fashion at StyleLoom, where trends meet
             affordability. Immerse yourself in the latest styles and seize

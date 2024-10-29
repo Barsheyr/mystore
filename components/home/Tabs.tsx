@@ -97,31 +97,31 @@ const Tabs: React.FC = () => {
         </div>
 
         {/* Tab Content */}
-        <div className="bg-green95 mt-10 border-dashed border-2">
+        <div className="bg-green95 mt-10">
           {tabs.map(
             (tab) =>
               activeTab === tab.id && (
                 <div key={tab.id} className="grid lg:grid-cols-2 grid-cols-1">
-                  <div className="border-dashed border-r-2 border-b-2">
-                    <div className="rounded-r-lg shadow-sm lg:py-5 lg:px-5 space-y-5">
+                  <div className="border-dashed border-r-2 border-t-2 border-b-2 p-5">
+                    <div className="rounded-r-lg lg:py-5 lg:px-5 space-y-5">
                       <p className="font-semibold lg:text-2xl">{tab.Name1}</p>
                       <p className="text-sm text-[#C4A484]"> {tab.p1} </p>
                     </div>
                   </div>
-                  <div className="border-dashed border-b-2">
-                    <div className="rounded-r-lg shadow-sm lg:py-5 lg:px-5 space-y-5">
+                  <div className="border-dashed border-b-2 border-t-2 p-5">
+                    <div className="rounded-r-lg lg:py-5 lg:px-5 space-y-5">
                       <p className="font-semibold lg:text-2xl">{tab.Name2}</p>
                       <p className="text-sm text-[#C4A484]"> {tab.p2} </p>
                     </div>
                   </div>
-                  <div className="border-dashed border-r-2">
-                    <div className="rounded-r-lg shadow-sm lg:py-5 lg:px-5 space-y-5">
+                  <div className="border-dashed p-5">
+                    <div className="rounded-r-lg lg:py-5 lg:px-5 space-y-5">
                       <p className="font-semibold lg:text-2xl">{tab.Name3}</p>
                       <p className="text-sm text-[#C4A484]"> {tab.p3} </p>
                     </div>
                   </div>
-                  <div className="">
-                    <div className="rounded-r-lg shadow-sm lg:py-5 lg:px-5 space-y-5">
+                  <div className="border-dashed border-l-2 p-5">
+                    <div className="rounded-r-lg lg:py-5 lg:px-5 space-y-5">
                       <p className="font-semibold lg:text-2xl">{tab.Name4}</p>
                       <p className="text-sm text-[#C4A484]"> {tab.p4} </p>
                     </div>

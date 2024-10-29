@@ -10,7 +10,10 @@ const Footer = () => {
   return (
     <section className="py-20">
       <div>
-        <div className="flex lg:flex-row flex-col items-center justify-between border-dashed border-2 p-10 text-3xl">
+        <div
+          className="flex lg:flex-row flex-col items-center justify-between border-dashed 
+        border-2 p-10 lg:text-3xl text-xl"
+        >
           <h3> TANK TOP </h3>
           <h3> V-NECK </h3>
           <h3> T-SHIRT </h3>
@@ -20,9 +23,9 @@ const Footer = () => {
 
         <div className="lg:px-20 px-5 py-20 flex lg:flex-row flex-col justify-between space-y-10">
           <div className="flex items-end gap-2">
-            <h1 className="text-6xl  font-bold"> Arsheyr </h1>
+            <h1 className="text-4xl lg:text-6xl font-bold"> Arsheyr </h1>
             <Image src={Dot} alt="star" />
-            <h1 className="text-6xl font-bold"> Loom </h1>
+            <h1 className="text-4xl lg:text-6xl font-bold"> Loom </h1>
           </div>
           <div className="flex gap-3">
             <Image src={Basketball} alt="basketball" className="w-10" />
