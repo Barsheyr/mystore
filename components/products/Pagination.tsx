@@ -12,21 +12,25 @@ const Pagination = ({
 }) => {
   const router = useRouter();
   const totalPages = Math.ceil(totalProducts / productsPerPage);
-
   const [currentPage, setCurrentPage] = useState(1);
 
-  // Synchronize the current page with the URL parameter
+  // Synchronize the current page with the URL parameter on initial render
   useEffect(() => {
-    const searchParams = new URLSearchParams(window.location.search);
-    const pageParam = searchParams.get("page");
-    setCurrentPage(pageParam ? parseInt(pageParam) : 1);
-  }, []);
+    if (typeof window !== "undefined") {
+      const searchParams = new URLSearchParams(window.location.search);
+      const pageParam = searchParams.get("page");
+      setCurrentPage(pageParam ? parseInt(pageParam) : 1);
+    }
+  }, []); // Empty dependency array: only run on initial render
 
   const handlePageChange = (newPage: number) => {
+    if (newPage < 1 || newPage > totalPages) return; // Prevent navigation to invalid pages
+
     const params = new URLSearchParams(window.location.search);
     params.set("page", newPage.toString());
 
     router.push(`/products?${params.toString()}`);
+    setCurrentPage(newPage); // Update the current page state
   };
 
   return (

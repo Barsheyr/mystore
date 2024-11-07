@@ -10,24 +10,27 @@ function Filter() {
   const router = useRouter();
   const [currentCategory, setCurrentCategory] = useState<Category>("");
 
+  // Use effect to initialize category from URL on component mount
   useEffect(() => {
-    // Only run this on the client-side
     if (typeof window !== "undefined") {
       const searchParams = new URLSearchParams(window.location.search);
       const category = searchParams.get("category") || "";
-      setCurrentCategory(category as Category); // Type assertion
+      setCurrentCategory(category as Category);
     }
   }, []);
 
+  // Update category and navigate to new URL
   const handleCategoryChange = (newCategory: Category | null) => {
     const searchParams = new URLSearchParams(window.location.search);
     if (newCategory) {
       searchParams.set("category", newCategory);
+      setCurrentCategory(newCategory); // Update state immediately
     } else {
       searchParams.delete("category");
+      setCurrentCategory(""); // Reset to "All" if no category
     }
     const newUrl = `/products?${searchParams.toString()}`;
-    router.push(newUrl); // Navigate to the new category
+    router.push(newUrl);
   };
 
   return (

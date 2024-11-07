@@ -10,23 +10,26 @@ import Link from "next/link";
 import Pagination from "./Pagination";
 import Filter from "./Filter";
 
+// Accept page as an optional parameter
 async function ProductsContainer({
   layout,
   search,
   category,
-  page = 1,
+  page,
 }: {
   layout: string;
   search: string;
   category: string;
-  page: number;
+  page?: number; // Make page optional
 }) {
-  const productsPerPage = 10; // Set limit of products per page
-  const skip = (page - 1) * productsPerPage;
+  const productsPerPage = 100; // Number of products per page
+  const currentPage = page || 1; // Use page if provided, else default to 1
+  const skip = (currentPage - 1) * productsPerPage; // Calculate how many products to skip
 
+  // Fetch all products with filtering
   const products = await fetchAllProducts({ search, category });
   const totalProducts = products.length;
-  const displayedProducts = products.slice(skip, skip + productsPerPage);
+  const displayedProducts = products.slice(skip, skip + productsPerPage); // Correct slicing logic
   const searchTerm = search ? `&search=${search}` : "";
   const categoryParam = category ? `&category=${category}` : "";
 
