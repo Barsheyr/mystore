@@ -53,36 +53,79 @@ export const fetchFeaturedProducts = async () => {
   return products;
 };
 
+// export const fetchAllProducts = ({
+//   search = "",
+//   category = "",
+//   page = 1,
+//   limit = 10,
+// }: {
+//   search: string;
+//   category?: string;
+//   page?: number;
+//   limit?: number;
+// }) => {
+//   const skip = (page - 1) * limit;
+
+//   return db.product.findMany({
+//     where: {
+//       AND: [
+//         {
+//           OR: [
+//             { name: { contains: search, mode: "insensitive" } },
+//             { company: { contains: search, mode: "insensitive" } },
+//           ],
+//         },
+//         category ? { category: category } : {}, // Conditional category filter
+//       ],
+//     },
+//     orderBy: {
+//       createdAt: "desc",
+//     },
+//     skip,
+//     take: limit,
+//   });
+// };
+
 export const fetchAllProducts = ({
   search = "",
-  category = "",
-  skip = 0,
-  take = 10, // Fetch 10 products per page by default
+  category = "all",
+  page = 1,
+  pageSize = 10,
 }: {
   search: string;
-  category?: string;
-  skip?: number;
-  take?: number;
+  category: "all" | "men" | "women" | "kids";
+  page: number;
+  pageSize: number;
 }) => {
+  // Build the initial filter array with search conditions (if any)
+  const filters = [];
+
+  if (search) {
+    filters.push(
+      {
+        name: { contains: search, mode: "insensitive" },
+      },
+      {
+        company: { contains: search, mode: "insensitive" },
+      }
+    );
+  }
+
+  // Add category filter only if category is not "all"
+  if (category !== "all") {
+    filters.push({ category: { equals: category, mode: "insensitive" } });
+  }
+
+  // Apply the filters and pagination
   return db.product.findMany({
     where: {
-      AND: [
-        {
-          OR: [
-            { name: { contains: search, mode: "insensitive" } },
-            { company: { contains: search, mode: "insensitive" } },
-          ],
-        },
-        {
-          category: category ? { equals: category } : undefined,
-        },
-      ],
+      AND: filters, // Combine filters using AND logic
     },
     orderBy: {
       createdAt: "desc",
     },
-    skip,
-    take,
+    skip: (page - 1) * pageSize,
+    take: pageSize,
   });
 };
 
